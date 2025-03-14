@@ -1,7 +1,5 @@
 name: Aprendendo gitHub Actions 
 on: push
-schedule:
-    - cron: '0 14 * * 1'  # Executa toda segunda-feira às 11:00 UTC
 jobs:
   cypress-run:
     runs-on: ubuntu-24.04
