@@ -1,5 +1,6 @@
 name: Aprendendo gitHub Actions 
-on: push
+  schedule:
+    - cron: '36 23 * * 5'  # Sexta-feira às 23:36 UTC (20:36 no Brasil)
 jobs:
   cypress-run:
     runs-on: ubuntu-24.04
