@@ -1,16 +1,19 @@
-name: Aprendendo gitHub Actions 
+# Nome do workflow
+name: Aprendendo GitHub Actions 
+
+# Define os eventos que acionam o workflow
 on:
-  push:
+  push:  # Executa a pipeline sempre que houver um push no repositório
   schedule:
-    - cron: '30 15 * * *'
+    - cron: '30 15 * * *'  # Agendamento para rodar diariamente às 15:30 UTC
+
 jobs:
   cypress-run:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-24.04  # Define o sistema operacional onde o job será executado
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
-      
-     
-        
+      - name: Checkout  # Passo para clonar o repositório no runner
+        uses: actions/checkout@v4  # Usa a ação oficial do GitHub para fazer checkout do código
+
+      - name: Cypress run  # Passo para rodar os testes do Cypress
+        uses: cypress-io/github-action@v6  # Utiliza a ação oficial do Cypress para executar os testes
