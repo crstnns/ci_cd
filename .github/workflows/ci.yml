@@ -5,7 +5,7 @@ on:
     branches:
       - main  # Ou o nome da branch onde você quer que o push dispare a ação
   schedule:
-    - cron: '16 00 * * 6'  # Executa toda sexta-feira às 21:05 no horário de Brasília (UTC 00:05)
+    - cron: '19 00 * * 6'  # Executa toda sexta-feira às 21:05 no horário de Brasília (UTC 00:05)
       branches:
         - main
 jobs:
