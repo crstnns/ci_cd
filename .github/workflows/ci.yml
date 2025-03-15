@@ -2,13 +2,7 @@ name: Aprendendo gitHub Actions
 on:
   push:
   schedule:
-    - cron: '23 14 * * 4'
-    - cron: '23 14 * * 6' 
-    - cron: '23 14 * * 5' 
-    - cron: '23 14 * * 4' 
-    - cron: '23 14 * * 3'   
-    - cron: '23 14 * * 2' 
-    - cron: '23 14 * * 1' 
+    - cron: '30 15 * * *'
 jobs:
   cypress-run:
     runs-on: ubuntu-24.04
