@@ -1,15 +1,19 @@
-name: Aprendendo gitHub Actions 
+name: Aprendendo GitHub Actions
+
 on:
   push:
+    branches:
+      - main  # Ou o nome da branch onde você quer que o push dispare a ação
   schedule:
-    - cron: '12 00 * * 6'  
+    - cron: '16 00 * * 6'  # Executa toda sexta-feira às 21:05 no horário de Brasília (UTC 00:05)
+
 jobs:
   cypress-run:
     runs-on: ubuntu-24.04
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Cypress run
         uses: cypress-io/github-action@v6
-     
-        
