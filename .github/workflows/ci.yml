@@ -1,5 +1,6 @@
 name: Aprendendo gitHub Actions 
-on: push
+on:
+  push:
   schedule:
     - cron: '5 00 * * 6'  
 jobs:
